@@ -133,9 +133,6 @@ public class GCodeHighLighter{
             spansBuilder.add(Collections.emptyList(), matcher.start() - lastKwEnd);
             spansBuilder.add(Collections.singleton(styleClass), matcher.end() - matcher.start());
             lastKwEnd = matcher.end();
-
-            if(styleClass.equalsIgnoreCase("number_line"))
-                System.out.println("NUMBER_LINE");
         }
         spansBuilder.add(Collections.emptyList(), text.length() - lastKwEnd);
         return spansBuilder.create();

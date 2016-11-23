@@ -47,8 +47,6 @@ public class RootController extends ViewController{
         Init
      */
     @FXML private void initialize(){
-        System.out.println("INITIALIZE");
-
         versionLabel.setText("Version " + Main.version);
 
         disableGCodeActions();
@@ -103,17 +101,14 @@ public class RootController extends ViewController{
         File actions
      */
     @FXML public void handleMenuFileNew(){
-        System.out.println("ACTION:FILE:NEW");
         gCodeDisplayer.createNewFile();
     }
 
     @FXML public void handleMenuFileOpen(){
-        System.out.println("ACTION:FILE:OPEN");
         gCodeDisplayer.openFile();
     }
 
     @FXML public void handleMenuFileOpenDago(){
-        System.out.println("ACTION:FILE:OPEN_DAGOMA0.G");
         gCodeDisplayer.openFile("G:/Dagoma0.g");
     }
 
@@ -126,14 +121,12 @@ public class RootController extends ViewController{
     }
 
     @FXML public void handleMenuFileQuit(){
-        System.out.println("ACTION:FILE:QUIT");
     }
 
     /*
         Edit actions
      */
     @FXML public void handleMenuEditPrinters(){
-        System.out.println("ACTION:EDIT:PRINTERS");
         Stage printersStage = createWindow("Imprimantes", "printers", this, false);
         printersStage.initOwner(window);
         printersStage.initModality(Modality.WINDOW_MODAL);
@@ -141,7 +134,6 @@ public class RootController extends ViewController{
     }
 
     @FXML public void handleMenuEditPreferences(){
-        System.out.println("ACTION:EDIT:PREFERENCE");
         Stage preferencesStage = createWindow("Préférences", "preferences", this, false);
         preferencesStage.initOwner(window);
         preferencesStage.initModality(Modality.WINDOW_MODAL);
@@ -152,7 +144,6 @@ public class RootController extends ViewController{
         Tools actions
      */
     @FXML public void handleMenuToolPrintMulticolors(){
-        System.out.println("ACTION:TOOL:PRINT_MULTICOLORS");
         Stage multiColorsStage = createWindow("Impression", "multipleColors", this, false);
         MultipleColorsController controller = (MultipleColorsController)getWindowController().get(multiColorsStage);
         controller.setProgrammeName(filesTabPane.getSelectionModel().getSelectedItem().getText());
@@ -177,22 +168,18 @@ public class RootController extends ViewController{
         Help actions
      */
     @FXML public void handleMenuHelpDoc(){
-        System.out.println("ACTION:HELP:DOCUMENTATION");
-        main.getHostServices().showDocument("https://winxaito.com");
+        main.getHostServices().showDocument("http://winxaito.com");
     }
 
     @FXML public void handleMenuHelpDocGCode(){
-        System.out.println("ACTION:HELP:DOCUMENTATION_GCODE");
-        main.getHostServices().showDocument("https://winxaito.com");
+        main.getHostServices().showDocument("http://winxaito.com");
     }
 
     @FXML public void handleMenuHelpTutorials(){
-        System.out.println("ACTION:HELP:TUTORIALS");
-        main.getHostServices().showDocument("https://winxaito.com");
+        main.getHostServices().showDocument("http://winxaito.com");
     }
 
     @FXML public void handleMenuHelpAbout(){
-        System.out.println("ACTION:HELP:ABOUT");
         Stage aboutStage = createWindow("A propos", "about", this, false);
         aboutStage.initOwner(window);
         aboutStage.initModality(Modality.WINDOW_MODAL);

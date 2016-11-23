@@ -13,7 +13,6 @@ public class RecentFiles{
     public RecentFiles(){
         file = new File(Configuration.configDir + "recentFiles.properties");
 
-        System.out.println(file.getAbsolutePath());
         if(!file.exists()){
             try{
                 if(!file.createNewFile())
