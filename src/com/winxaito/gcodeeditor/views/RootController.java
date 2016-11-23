@@ -168,15 +168,15 @@ public class RootController extends ViewController{
         Help actions
      */
     @FXML public void handleMenuHelpDoc(){
-        main.getHostServices().showDocument("http://winxaito.com");
+        main.getHostServices().showDocument("https://geditor.winxaito.com");
     }
 
     @FXML public void handleMenuHelpDocGCode(){
-        main.getHostServices().showDocument("http://winxaito.com");
+        main.getHostServices().showDocument("https://geditor.winxaito.com");
     }
 
     @FXML public void handleMenuHelpTutorials(){
-        main.getHostServices().showDocument("http://winxaito.com");
+        main.getHostServices().showDocument("https://geditor.winxaito.com");
     }
 
     @FXML public void handleMenuHelpAbout(){

@@ -21,7 +21,7 @@ public class AboutController extends ViewController{
         aboutLink_github.setOnMouseClicked(event -> main.getHostServices().showDocument(
                 "https://github.com/WinXaito/"));
         aboutLink_website.setOnMouseClicked(event -> main.getHostServices().showDocument(
-                "http://winxaito.com"));
+                "https://geditor.winxaito.com"));
 
         aboutLink_richtextfx_license.setOnMouseClicked(event -> main.getHostServices().showDocument(
                 "https://github.com/TomasMikula/RichTextFX/blob/master/LICENSE"));
