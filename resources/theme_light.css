@@ -1,0 +1,17 @@
+.title{
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: rgb(0, 0, 100);
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+.subtitle{
+    -fx-font-size: 14;
+}
+.hyperlink{
+    -fx-text-fill: rgb(0, 0, 100);
+    -fx-border-width: 0;
+    -fx-underline: false;
+}
+.hyperlink:hover{
+    -fx-underline: true;
+}

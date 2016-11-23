@@ -1,0 +1,21 @@
+.gcode{
+    -fx-fill: #b20d2a;
+    -fx-font-weight: bold;
+}
+.mcode{
+    -fx-fill: #0016b2;
+    -fx-font-weight: bold;
+}
+.args_pos{
+    -fx-fill: #b2731d;
+}
+
+.args_speed{
+    -fx-fill: #b24307;
+}
+.number_line{
+    -fx-fill: #ababab;
+}
+.comment {
+    -fx-fill: cadetblue;
+}

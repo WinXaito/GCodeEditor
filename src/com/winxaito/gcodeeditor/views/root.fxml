@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.winxaito.gcodeeditor.views.RootController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleMenuFileNew" text="Nouveau" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuFileOpen" text="Ouvrir" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuFileOpenDago" text="Ouvrir Dagoma0.g" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Ouvert récemment" />
+                  <MenuItem fx:id="menuFileSave" mnemonicParsing="false" onAction="#handleMenuFileSave" text="Enregistrer" />
+                  <MenuItem fx:id="menuFileSaveAs" mnemonicParsing="false" onAction="#handleMenuFileSaveAs" text="Enregistrer sous...." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuFileQuit" text="Quitter" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edition">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuEditPrinters" text="Imprimantes" />
+              <MenuItem mnemonicParsing="false" onAction="#handleMenuEditPreferences" text="Préférences" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Outils">
+               <items>
+                  <MenuItem fx:id="menuToolMulticolors" mnemonicParsing="false" onAction="#handleMenuToolPrintMulticolors" text="Impression multicolors" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Impression interrompue" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Réglage du débit" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Affichage" />
+            <Menu mnemonicParsing="false" text="Aide">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuHelpDoc" text="Documentation" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuHelpDocGCode" text="Documentation GCode" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuHelpTutorials" text="Tutoriels" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuHelpAbout" text="A propos" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="filesTabPane" prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab closable="false" text="Accueil">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" styleClass="title">
+                                 <children>
+                                    <Label text="GCodeEditor">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold Italic" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_RIGHT">
+                                 <children>
+                                    <Label fx:id="versionLabel" styleClass="subtitle" text="VERSION_LABEL">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="280.0" prefWidth="280.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="305.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Fichier">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Hyperlink onAction="#handleMenuFileNew" text="Nouveau" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink onAction="#handleMenuFileOpen" text="Ouvrir" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink onAction="#handleMenuHelpDoc" text="Documentation" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink onAction="#handleMenuHelpDocGCode" text="Documentation GCode" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Label text="Aide" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Hyperlink onAction="#handleMenuFileOpenDago" text="Ouvrir Dagoma0.g" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink onAction="#handleMenuHelpTutorials" text="Tutoriels" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Label text="Fichiers récemment ouvert" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Hyperlink fx:id="homeLink_recent_1" text="recent_open_1" visible="false" GridPane.rowIndex="5">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="homeLink_recent_2" text="recent_open_2" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="homeLink_recent_3" text="recent_open_3" visible="false" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="homeLink_recent_4" text="recent_open_4" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="homeLink_recent_5" text="recent_open_5" visible="false" GridPane.rowIndex="7">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="homeLink_recent_6" text="recent_open_6" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Hyperlink>
+                                    <Label fx:id="homeLink_recentFilesLabel" text="Aucun fichier n'a récemment été ouvert" GridPane.rowIndex="5">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
