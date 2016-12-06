@@ -12,7 +12,7 @@
          <children>
             <Label prefWidth="2000.0" styleClass="title" text="Imprimantes">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font key="System Bold" size="18.0" />
                </font>
                <VBox.margin>
                   <Insets />

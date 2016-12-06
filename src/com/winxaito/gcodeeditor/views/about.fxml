@@ -16,7 +16,7 @@
          <children>
             <Label prefWidth="2000.0" style="-fx-border-width: 0 0 3 0; -fx-border-color: rgb(0, 0, 100);" text="GCodeEditor">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font key="System Bold" size="24.0" />
                </font>
                <padding>
                   <Insets bottom="5.0" left="10.0" top="5.0" />

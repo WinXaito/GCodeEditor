@@ -6,10 +6,7 @@ import com.winxaito.gcodeeditor.modules.gcode.GCodeDisplayer;
 import com.winxaito.gcodeeditor.utils.FileInformations;
 import com.winxaito.gcodeeditor.utils.SaveFile;
 import javafx.fxml.FXML;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TabPane;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
