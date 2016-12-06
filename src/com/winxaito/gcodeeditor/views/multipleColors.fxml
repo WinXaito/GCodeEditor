@@ -59,7 +59,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                      <font>
-                        <Font key="System Bold" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ComboBox fx:id="printers" prefWidth="150.0" promptText="DiscoEasy200" GridPane.columnIndex="1">
@@ -72,7 +72,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                      <font>
-                        <Font key="System Bold" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ComboBox fx:id="numberLayer" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -85,7 +85,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                      <font>
-                        <Font key="System Bold" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <TextField fx:id="layer_1" maxWidth="50.0" GridPane.rowIndex="3">
@@ -118,7 +118,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                      <font>
-                        <Font key="System Bold" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <TextField fx:id="temp_1" maxWidth="50.0" prefWidth="20.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -151,7 +151,7 @@
                         <Insets left="10.0" />
                      </padding>
                      <font>
-                        <Font key="System Bold" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <HBox GridPane.rowIndex="9">

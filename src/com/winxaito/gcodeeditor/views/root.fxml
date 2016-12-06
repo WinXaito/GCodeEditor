@@ -75,7 +75,7 @@
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                        </padding>
                                        <font>
-                                          <Font key="System Bold Italic" size="25.0" />
+                                          <Font name="System Bold Italic" size="25.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -110,7 +110,7 @@
                                  <children>
                                     <Label text="Fichier">
                                        <font>
-                                          <Font key="System Bold" size="13.0" />
+                                          <Font name="System Bold" size="13.0" />
                                        </font>
                                     </Label>
                                     <Hyperlink onAction="#handleMenuFileNew" text="Nouveau" GridPane.rowIndex="1">
@@ -135,7 +135,7 @@
                                     </Hyperlink>
                                     <Label text="Aide" GridPane.columnIndex="1">
                                        <font>
-                                          <Font key="System Bold" size="13.0" />
+                                          <Font name="System Bold" size="13.0" />
                                        </font>
                                     </Label>
                                     <Hyperlink onAction="#handleMenuFileOpenDago" text="Ouvrir Dagoma0.g" GridPane.rowIndex="3">
@@ -150,7 +150,7 @@
                                     </Hyperlink>
                                     <Label text="Fichiers récemment ouvert" GridPane.rowIndex="4">
                                        <font>
-                                          <Font key="System Bold" size="13.0" />
+                                          <Font name="System Bold" size="13.0" />
                                        </font>
                                     </Label>
                                     <Hyperlink fx:id="homeLink_recent_1" text="recent_open_1" visible="false" GridPane.rowIndex="5">
