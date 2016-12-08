@@ -10,6 +10,7 @@ import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**
@@ -80,10 +81,16 @@ public class GCodeDisplayer{
         Tab tab = new Tab(file.getName(), scrollPane);
 
         GCode gCode;
-        if(newFile)
+        if(newFile){
             gCode = new GCode(file.getName(), "", codeArea, tab);
-        else
-            gCode = new GCode(file.getName(), new OpenFile(file).getFileContent(), codeArea, tab);
+        }else{
+            try{
+                gCode = new GCode(file.getName(), new OpenFile(file).getFileContent(), codeArea, tab);
+            }catch(FileNotFoundException e){
+                e.printStackTrace();
+                return;
+            }
+        }
 
         codeArea.appendText(gCode.getContent());
         codeArea.setParagraphGraphicFactory(LineNumberFactory.get(codeArea));

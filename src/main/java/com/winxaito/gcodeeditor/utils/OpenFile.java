@@ -20,20 +20,24 @@ public class OpenFile{
         return file;
     }
 
-    public String getFileContent(){
+    public String getFileContent() throws FileNotFoundException{
         StringBuilder stringBuilder = new StringBuilder();
         String lineSeparator = System.getProperty("line.separator");
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append(lineSeparator);
+        if(file.exists()){
+            try(BufferedReader br = new BufferedReader(new FileReader(file))){
+                String line;
+                while((line = br.readLine()) != null){
+                    stringBuilder.append(line);
+                    stringBuilder.append(lineSeparator);
+                }
+            }catch(IOException e){
+                e.printStackTrace();
             }
-        }catch(IOException e){
-            e.printStackTrace();
-        }
 
-        return stringBuilder.toString();
+            return stringBuilder.toString();
+        }else{
+            throw new FileNotFoundException("File <" + file.getPath() + "> not found");
+        }
     }
 }
